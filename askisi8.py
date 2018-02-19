@@ -18,9 +18,9 @@ c=0
 x=np.sort(x)
 
 for i in range(0,(len(x)-2),1):
-    for j in range(1,(len(x)-1),1):
-        for k in range(2,len(x),1):
-            if x[i]+x[j]+x[k]==0 and x[i]<=x[j]<=x[k]:
+    for j in range(i,(len(x)-1),1):
+        for k in range(j,len(x),1):
+            if (x[i]+x[j]+x[k]==0) and (x[i]<=x[j]<x[k]):
                 comb[c,:]=np.hstack(([x[i],x[j],x[k]]))
                 c+=1
                 flag=0
